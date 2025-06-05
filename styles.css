@@ -1,0 +1,133 @@
+/* Add Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+
+
+/* Using All Class same dataset */
+:root{
+    /* Define Variables --> var() */
+    --accent : #F5EBDC; /* Search Fill */
+    --accentHover : #675c4c; /* Mouse Hover Search Fill */
+    --transition : all 0.3s ease 0s /* Delay time */ 
+}
+
+/* All section */
+*{
+    /* Clear margin and padding */
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html, body{
+    height: 100; /* Fix Background */
+    overflow: auto;
+}
+
+body{
+    background-color: #F5EBDC;
+}
+
+a, button, p{
+    font-family: "Inter", sans-serif;
+    color: #2A3855;
+}
+
+
+a, button, .logo{
+    cursor: pointer; /* Hand Cursor link */
+}
+
+main{
+    height: 100;
+    display: grid;
+    grid-template-columns: minmax(60px,1fr) repeat(6, minmax(50px, 1fr))
+    minmax(60px, 1fr)
+}
+
+header{
+    grid-column: 2 / span 6;
+    margin-right: 10px; /*ความห่างตรงลิงค์เมนู*/
+
+}
+
+nav{
+    display: flex;
+    align-items: center;
+    height: 120px;
+}
+
+
+/* class */
+
+.search{
+    margin-right: 100px;
+}
+
+.Links a, link button{
+    font-size: 20px;
+    transition: var(--transition);
+    margin-right: 10px; /*ความห่างตรงลิงค์เมนู*/
+    cursor: pointer;
+}
+
+.Links a:hover{
+    color: var(--accentHover);
+}
+
+.info{
+    grid-column: 3 / span 4;
+    margin: 30px;
+    align-items: center;
+    text-align: center;
+}
+
+.content_font1{
+    font-family: "Inter", sans-serif;
+    font-size: 20px;
+    margin-top: 40px;
+}
+
+.features{
+    grid-column: 2 / span 6;
+    margin-top: 10px;
+    display: flex;
+    align-items: left;
+}
+
+/* ทำให้รูปอื่นๆขึ้นมาบรรทัดเดียวกัน */
+.feature{
+    display: flex;
+    align-items: center;
+
+}
+
+.feature img{
+    margin-right: 10px;
+}
+
+/* Resposive Website */
+@media only screen and (max-width:800px){
+    .feature img{
+        height: 200px;
+        width: auto;
+        margin: 0px 0px 0px 0px;
+    }
+    .content_font1{
+        font-size: 14px;
+    }
+
+}
+
+@media only screen and (max-width:850px) {
+    .info{
+        grid-column: 2 / span 6;
+        text-align: center;
+    }
+    .info_textbold{
+        height: auto;
+        width: 300px;
+        align-items: center;
+        margin-top: 10px;
+    }
+}
